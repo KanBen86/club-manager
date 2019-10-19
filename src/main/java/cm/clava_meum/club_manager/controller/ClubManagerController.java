@@ -12,7 +12,7 @@ public class ClubManagerController {
     String appName;
 
     @GetMapping("/")
-    public String index (Model model){
+    public String homePage (Model model){
         model.addAttribute("appName", appName);
         return "home";
     }
