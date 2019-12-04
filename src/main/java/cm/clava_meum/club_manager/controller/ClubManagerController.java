@@ -1,6 +1,7 @@
 package cm.clava_meum.club_manager.controller;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +18,13 @@ public class ClubManagerController {
 
     //Index Page
     @RequestMapping("/")
-    public void getIndexPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void index(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("index", "/");
         request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
     }
+
+//    @GetMapping("/myError")
+//    public String myError(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        return "error";
+//    }
 }
