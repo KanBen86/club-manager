@@ -2,6 +2,7 @@ package cm.clava_meum.club_manager.entities;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Person {
@@ -18,6 +19,9 @@ public class Person {
 
     @Column
     private Date birthday;
+
+    @OneToMany
+    private List<Address> addressList;
 
     public Person (){
 
